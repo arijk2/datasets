@@ -1,0 +1,30 @@
+{
+  "name": "Product Workflow Widget",
+  "version": "1.0",
+  "description": "Related List widget to display product workflow pipeline",
+  "platform": "crm.v2",
+  "hosting": {
+    "type": "ZOHO"
+  },
+  "ui": {
+    "type": "relatedlist",
+    "architecture": "thin",
+    "pages": {
+      "index": {
+        "html": "index.html",
+        "js": "script.js",
+        "css": "style.css"
+      }
+    }
+  },
+  "components": [
+    {
+      "name": "Product Workflow",
+      "location": "crm.relatedlists.Products",
+      "link": "index",
+      "target": {
+        "module": "Products"
+      }
+    }
+  ]
+}
