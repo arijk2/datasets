@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    background: #fff;
+    color: #333;
+}
+
+.stage-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stage {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.stage.completed {
+    border-color: #28a745;
+    background-color: #e6ffe9;
+}
+
+.stage-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.checklist {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.checklist li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.checklist li::before {
+    content: "\2610"; /* empty checkbox */
+    position: absolute;
+    left: 0;
+}
+
+.checklist li.done::before {
+    content: "\2611"; /* checked checkbox */
+    color: #28a745;
+}
+
+#progress {
+    height: 10px;
+    background: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+#progress-bar {
+    height: 100%;
+    background: #28a745;
+    width: 0;
+}
